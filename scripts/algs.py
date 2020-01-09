@@ -9,7 +9,10 @@ def pointless_sort(x):
 
 def insertionsort(x):
     """
-    TODO: add comments on insertion sort alg
+    input: insertsion sort takes in a list or numpy array
+    output: returns the list or array in sorted order
+
+    notes: use insertion sort algorithm -- adapted from pseudocode in Cormen textbook
     """
     for j in range(1, len(x)):
         key = x[j]
@@ -23,7 +26,10 @@ def insertionsort(x):
 
 def bubblesort(x):
     """
-    Describe how you are sorting `x`
+    input: insertsion sort takes in a list or numpy array
+    output: returns the list or array in sorted order
+
+    notes: use bubble sort algorithm -- adapted from pseudocode in Cormen textbook
     """
     for i in range(len(x)):
         for j in range(len(x)-1, i+1, -1):
@@ -32,6 +38,12 @@ def bubblesort(x):
     return x
 
 def quicksort(x, start=0, end=len(x)-1):
+        """
+        input: insertsion sort takes in a list or numpy array and the first and last index of the array
+        output: returns the list or array in sorted order
+
+        notes: use quicksort algorithm -- adapted from pseudocode in Cormen textbook
+        """
     if start < end:
         split = partition(x, start, end)
         quicksort(x, start, split - 1)
@@ -42,7 +54,10 @@ def quicksort(x, start=0, end=len(x)-1):
 
 def partition(A,p,r):
     '''
-    TODO: comment partition code
+    input: an array and the first and last index of a region of the array
+    output: a pivot index
+
+    notes: partition algorithm adapted form pseudocode in Cormen textbook
     '''
     x = A[r]
     i = p-1
