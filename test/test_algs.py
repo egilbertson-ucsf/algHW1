@@ -21,7 +21,7 @@ def test_bubblesort():
     # failing, (2) does your code handle characters?
 
     # empty vector
-    e = np.empty(dtype=float)
+    e = np.empty(2,dtype=float)
     assert np.array_equal(algs.bubblesort(e), e)
 
     # single element
@@ -40,7 +40,7 @@ def test_bubblesort():
     c = ['a','b','a','c']
     assert algs.bubblesort(c) == ['a','a','b','c']
 
-    
+
 def test_quicksort():
 
     x = np.array([1,2,4,0,1])
