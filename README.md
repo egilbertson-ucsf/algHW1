@@ -1,7 +1,7 @@
-# example
+# Homework 1
 
 [![Build 
-Status](https://travis-ci.org/egilbertson-ucsf/example.svg?branch=master)](https://travis-ci.org/egilbertson-ucsf/example)
+Status](https://travis-ci.org/egilbertson-ucsf/algHW1.svg?branch=master)](https://travis-ci.org/egilbertson-ucsf/algHW1)
 
 
 Example python project with testing.
