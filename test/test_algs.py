@@ -20,12 +20,27 @@ def test_bubblesort():
     # think about: (1) does your code handle 0-element arrays without
     # failing, (2) does your code handle characters?
 
-    x = np.array([1,2,4,0,1])
-    
-    # for now, just attempt to call the bubblesort function, should
-    # actually check output
-    algs.bubblesort(x)
+    # empty vector
+    e = np.empty(dtype=float)
+    assert np.array_equal(algs.bubblesort(e), e)
 
+    # single element
+    s = np.array([1])
+    assert np.array_equal(algs.bubblesort(s), s)
+
+    # dup elements, even length
+    d = np.array([1,3,2,1,5,1])
+    assert np.array_equal(algs.bubblesort(d), np.array([1,1,1,2,3,5]))
+
+    # odd length
+    o = np.array([3,2,4])
+    assert np.array_equal(algs.bubblesort(o), np.array([2,3,4]))
+
+    #char
+    c = ['a','b','a','c']
+    assert algs.bubblesort(c) == ['a','a','b','c']
+
+    
 def test_quicksort():
 
     x = np.array([1,2,4,0,1])
