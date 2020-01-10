@@ -34,7 +34,7 @@ def bubblesort(x):
     for i in range(len(x)):
         for j in range(len(x)-1, i+1, -1):
             if x[j] < x[j-1]:
-    assert 1 == 1
+                x[j], x[j-1] = x[j-1], x[j]
     return x
 
 def quicksort(x, start=0, end=len(x)-1):
