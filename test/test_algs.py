@@ -43,7 +43,22 @@ def test_bubblesort():
 
 def test_quicksort():
 
-    x = np.array([1,2,4,0,1])
-    # for now, just attempt to call the quicksort function, should
-    # actually check output
-    algs.quicksort(x)
+    # empty vector
+    e = np.empty(2,dtype=float)
+    assert np.array_equal(algs.quicksort(e), e)
+
+    # single element
+    s = np.array([1])
+    assert np.array_equal(algs.quicksort(s), s)
+
+    # dup elements, even length
+    d = np.array([1,3,2,1,5,1])
+    assert np.array_equal(algs.quicksort(d), np.array([1,1,1,2,3,5]))
+
+    # odd length
+    o = np.array([3,2,4])
+    assert np.array_equal(algs.quicksort(o), np.array([2,3,4]))
+
+    #char
+    c = ['a','b','a','c']
+    assert algs.quicksort(c) == ['a','a','b','c']
