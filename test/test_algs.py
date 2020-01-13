@@ -1,5 +1,5 @@
 import numpy as np
-from example import algs
+from scripts import algs
 
 def test_pointless_sort():
     # generate random vector of length 10
@@ -30,7 +30,6 @@ def test_bubblesort():
 
     # dup elements, even length
     d = np.array([1,3,2,1,5,1])
-    print(algs.bubblesort(d))
     assert np.array_equal(algs.bubblesort(d), np.array([1,1,1,2,3,5]))
 
     # odd length
