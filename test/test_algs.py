@@ -30,7 +30,6 @@ def test_bubblesort():
 
     # dup elements, even length
     d = np.array([1,3,2,1,5,1])
-    print(d)
     print(algs.bubblesort(d))
     assert np.array_equal(algs.bubblesort(d), np.array([1,1,1,2,3,5]))
 
