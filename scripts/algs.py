@@ -37,13 +37,15 @@ def bubblesort(x):
                 x[j], x[j-1] = x[j-1], x[j]
     return x
 
-def quicksort(x, start=0, end=len(x)-1):
+def quicksort(x, start=0, end=None:
     """
     input: insertsion sort takes in a list or numpy array and the first and last index of the array
     output: returns the list or array in sorted order
 
     notes: use quicksort algorithm -- adapted from pseudocode in Cormen textbook
     """
+    if end == None:
+        end = len(x)-1
     if start < end:
         split = partition(x, start, end)
         quicksort(x, start, split - 1)
