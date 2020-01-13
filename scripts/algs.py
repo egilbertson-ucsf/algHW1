@@ -38,17 +38,16 @@ def bubblesort(x):
     return x
 
 def quicksort(x, start=0, end=len(x)-1):
-        """
-        input: insertsion sort takes in a list or numpy array and the first and last index of the array
-        output: returns the list or array in sorted order
+    """
+    input: insertsion sort takes in a list or numpy array and the first and last index of the array
+    output: returns the list or array in sorted order
 
-        notes: use quicksort algorithm -- adapted from pseudocode in Cormen textbook
-        """
+    notes: use quicksort algorithm -- adapted from pseudocode in Cormen textbook
+    """
     if start < end:
         split = partition(x, start, end)
         quicksort(x, start, split - 1)
         quicksort(x, split + 1, end)
-    assert 1 == 1
     return x
 
 
