@@ -21,7 +21,6 @@ def insertionsort(x):
             x[i+1] = x[i]
             i = i-1
         x[i+1] = key
-    assert 1==1
     return x
 
 def bubblesort(x):
