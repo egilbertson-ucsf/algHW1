@@ -26,7 +26,7 @@ def insertionsort(x):
             assign += 1
         x[i+1] = key
         assign += 1
-    return x, cond, assign
+    return [x, cond, assign]
 
 def bubblesort(x):
     """
@@ -35,6 +35,7 @@ def bubblesort(x):
 
     notes: use bubble sort algorithm -- adapted from pseudocode in Cormen textbook
     """
+    print('start bubble')
     assign = 0
     cond = 0
     for i in range(len(x)):
@@ -43,7 +44,7 @@ def bubblesort(x):
                 cond += 1
                 x[j], x[j-1] = x[j-1], x[j]
                 assign += 1
-    return x
+    return [x, cond, assign]
 
 def quicksort(x, start=0, end=None):
     """
@@ -63,7 +64,7 @@ def quicksort(x, start=0, end=None):
 
         quicksort(x, start, split - 1)
         quicksort(x, split + 1, end)
-    return x
+    return [x, cond, assign]
 
 
 def partition(A,p,r, cond, assign):
