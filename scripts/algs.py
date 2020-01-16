@@ -35,7 +35,6 @@ def bubblesort(x):
 
     notes: use bubble sort algorithm -- adapted from pseudocode in Cormen textbook
     """
-    print('start bubble')
     assign = 0
     cond = 0
     for i in range(len(x)):
