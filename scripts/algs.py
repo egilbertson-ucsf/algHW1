@@ -19,6 +19,7 @@ def insertionsort(x):
     for j in range(1, len(x)):
         key = x[j]
         i = j-1
+        assign += 2
         while i >= 0 and x[i] > key:
             cond += 2
             x[i+1] = x[i]
